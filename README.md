@@ -1,12 +1,101 @@
-# React + Vite
+# 🦸 Marvel Universe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Marvel Logo](https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg)
 
-Currently, two official plugins are available:
+A **React + Express** app to manage Marvel characters. Users can **view, add, edit, delete, and filter** characters from a table. Data is stored in a JSON file on the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Display a table of Marvel characters:
+  - ID
+  - Name
+  - Real Name
+  - Universe
+- Add new characters
+- Edit existing characters
+- Delete characters
+- Filter characters by name
+- Responsive design with **Tailwind CSS**
+- Simple, clean UI
+
+---
+
+## 📂 Project Structure
+
+/frontend
+/src
+/components
+CharacterForm.jsx
+CharactersTable.jsx
+Filter.jsx
+App.jsx
+main.jsx
+api.js
+index.html
+/server
+server.js
+characters.json
+
+---
+
+## 🛠 Requirements
+
+- Node.js >= 18
+- npm or yarn
+- Modern browser
+
+---
+
+## ⚡ Installation
+
+1. **Clone the repo**
+
+git clone <your-repo-url>
+cd marvel-universe
+
+2. **Install backend dependencies**
+
+cd server
+npm install express
+
+
+3. **Install frontend dependencies**
+
+
+cd ../frontend
+npm install
+
+
+4. **Start backend server**
+
+
+cd ../server
+node server.js
+
+
+5. **Start frontend development server**
+
+ 
+cd ../frontend
+npm run dev
+
+
+6. **Open in browser**
+
+http://localhost:5173
+
+---
+
+## 💻 Usage
+
+Use the search input to filter characters.
+
+Fill the form to add a new character.
+
+Click Edit to modify a character.
+
+Click Delete to remove a character.
+
+All changes are saved to server/characters.json.
