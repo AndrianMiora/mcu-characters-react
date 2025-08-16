@@ -98,5 +98,3 @@ Fill the form to add a new character.
 Click Edit to modify a character.
 
 Click Delete to remove a character.
-
-All changes are saved to server/characters.json.
