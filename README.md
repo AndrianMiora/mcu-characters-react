@@ -1,6 +1,7 @@
 # 🦸 Marvel Universe App
 
-![Marvel Logo](https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg)
+![marvel_logo](https://github.com/user-attachments/assets/09760bcb-e401-45f8-a6e6-9c1ff735285a)
+
 
 A **React + Express** app to manage Marvel characters. Users can **view, add, edit, delete, and filter** characters from a table. Data is stored in a JSON file on the backend.
 
