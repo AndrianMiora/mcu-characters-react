@@ -16,7 +16,7 @@ function App() {
   const fetchCharacters = async () => {
     try {
       const response = await getCharacters();
-      setCharacters(response.data); // your backend returns array directly
+      setCharacters(response.data);
     } catch (error) {
       console.error('Failed to fetch characters', error);
     }

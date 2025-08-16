@@ -9,17 +9,14 @@ const DATA_FILE = "./characters.json";
 app.use(cors());
 app.use(express.json());
 
-// Helper: load & save
 const loadData = () => JSON.parse(fs.readFileSync(DATA_FILE));
 const saveData = (data) => fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 
-// GET all characters
 app.get("/characters", (req, res) => {
   const data = loadData();
   res.json(data.characters);
 });
 
-// GET by ID
 app.get("/characters/:id", (req, res) => {
   const data = loadData();
   const character = data.characters.find(c => c.id == req.params.id);
@@ -27,7 +24,6 @@ app.get("/characters/:id", (req, res) => {
   else res.status(404).json({ message: "Not found" });
 });
 
-// POST new character
 app.post("/characters", (req, res) => {
   const data = loadData();
   const newChar = { id: Date.now(), ...req.body };
@@ -36,7 +32,6 @@ app.post("/characters", (req, res) => {
   res.status(201).json(newChar);
 });
 
-// PUT update
 app.put("/characters/:id", (req, res) => {
   const data = loadData();
   const idx = data.characters.findIndex(c => c.id == req.params.id);
@@ -47,7 +42,6 @@ app.put("/characters/:id", (req, res) => {
   } else res.status(404).json({ message: "Not found" });
 });
 
-// DELETE
 app.delete("/characters/:id", (req, res) => {
   const data = loadData();
   data.characters = data.characters.filter(c => c.id != req.params.id);
